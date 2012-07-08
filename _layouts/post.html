@@ -1,0 +1,12 @@
+---
+layout: default
+---
+      <section>
+        <div id="title">
+          <h3>{{page.title}}</h3>
+          <time class="credits right" datetime="{{ page.date | date: "%Y-%m-%d" }}" pubdate="">{{ page.date | date: "%B %e, %Y" }}</time>
+          <hr>
+        </div>
+        {{ content }}
+      </section>
+
