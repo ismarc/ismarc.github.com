@@ -4,7 +4,7 @@ layout: default
 
 <div class="listing">
   <h3 style="margin-top: 10px;">Programming</h3>
-  {% for post in site.categories.programming %}
+  {% for post in site.tags.programming %}
     <article>
       <time datetime="{{ post.date | date: "%Y-%m-%d" }}" pubdate="">{{ post.date | date: "%B %e, %Y" }}</time>
       <hr>
