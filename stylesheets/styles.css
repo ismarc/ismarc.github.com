@@ -659,7 +659,11 @@ pre code {
   margin: 0;
   padding: 0;
 }
-
+#categories {
+  margin-top: 10px;
+  margin-left: 5px;
+  float: left;
+}
 table {
   width: 100%;
   border-collapse: collapse;
