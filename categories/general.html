@@ -1,0 +1,16 @@
+---
+layout: default
+---
+
+<div class="listing">
+  <h3 style="margin-top: 10px;">General</h3>
+  {% for post in site.tags.general %}
+    <article>
+      <time datetime="{{ post.date | date: "%Y-%m-%d" }}" pubdate="">{{ post.date | date: "%B %e, %Y" }}</time>
+      <hr>
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt }}</p>
+      <p><a href="{{ post.url }}" class="continue">Read More</a></p>
+    </article>
+  {% endfor %}
+</div>
