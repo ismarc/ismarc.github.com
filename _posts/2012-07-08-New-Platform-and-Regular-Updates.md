@@ -2,7 +2,7 @@
 layout: post
 title: New Platform and Regular Updates
 tags: general
-excerpt: With what I want to do with the blog, a standard community-style blog platform really didn't fit.  I've migrated to a [jekyll](https://github.com/mojombo/jekyll/ "jekyll") based system using a slightly modified version of Midnight included with Github Pages.  As part of the process, I've migrated a few of my previous posts that I wanted to maintain.  The whole system is now much easier to maintain and much more pleasant to work with.
+excerpt: With what I want to do with the blog, a standard community-style blog platform really didn't fit.  I've migrated to a jekyll based system using a slightly modified version of Midnight included with Github Pages.  As part of the process, I've migrated a few of my previous posts that I wanted to maintain.  The whole system is now much easier to maintain and much more pleasant to work with.
 ---
 ### New Platform ###
 With what I want to do with the blog, a standard community-style blog
