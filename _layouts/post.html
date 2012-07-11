@@ -3,10 +3,20 @@ layout: default
 ---
       <section>
         <div id="title">
-          <h3>{{page.title}}</h3>
+          <h3>
+            {{page.title}}
+          </h3>
           <time class="credits right" datetime="{{ page.date | date: "%Y-%m-%d" }}" pubdate="">{{ page.date | date: "%B %e, %Y" }}</time>
           <hr>
         </div>
+          <div class="left">
+            <script type="text/javascript">
+              reddit_url = "http://ismarc.github.com{{ page.url }}";
+              reddit_title = "{{page.title}}";
+              reddit_target = "ismarc";
+            </script>
+            <script type="text/javascript" src="http://www.reddit.com/static/button/button1.js"></script>
+          </div>
         {{ content }}
       </section>
 
