@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using Reddit for Blog Comments
-tags: general
+tags: general programming
 excerpt: 
 ---
 Reddit provides a wonderful system for voting stories up and down,
