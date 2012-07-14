@@ -30,7 +30,9 @@ excerpt: RocketShip was created as a way to extract more useful documentation fr
 <h3>Example</h3>
 <p>What new product would be complete without a demonstration of capabilities? Rather than a contrived set of code to generate a graph that looks wonderful, I have been testing RocketShip against code I had laying around from working on Project Euler problems. Below is the source code for the function, the assembly representation of the bitcode and the subsequent graph that was generated automatically.</p>
 <h3>Original Source</h3>
-<pre class="sh_c">void multiplyBigInt(int first[], int second[], int destination[])
+<pre class="sh_c">
+{% highlight c %}
+void multiplyBigInt(int first[], int second[], int destination[])
 {
     int i;
     int temp[2000] = { 0 };
@@ -44,9 +46,12 @@ excerpt: RocketShip was created as a way to extract more useful documentation fr
         copyBigInt(destination, temp_two);
     }
 }
+{% endhighlight %}
 </pre>
 <h3>LLVM Assembly bitcode representation</h3>
-<pre>define void @multiplyBigInt(i32* %first, i32* %second, i32* %destination) nounwind {
+<pre>
+{% highlight llvm %}
+define void @multiplyBigInt(i32* %first, i32* %second, i32* %destination) nounwind {
 entry:
   %first_addr = alloca i32*                       ;  [#uses=2]
   %second_addr = alloca i32*                      ;  [#uses=2]
@@ -103,6 +108,7 @@ bb10:                                             ; preds = %bb9
 return:                                           ; preds = %bb10
   ret void
 }
+{% endhighlight %}
 </pre>
 <h3>Generated Graph</h3>
 <p><img alt="multiplyBigInt" src="//ismarc.github.com/images/rocketship_1.png"/></p>
