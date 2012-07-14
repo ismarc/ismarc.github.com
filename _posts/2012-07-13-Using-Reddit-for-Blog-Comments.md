@@ -2,7 +2,7 @@
 layout: post
 title: Using Reddit for Blog Comments
 tags: general programming
-excerpt: 
+excerpt: Reddit provides a wonderful system for voting stories up and down, discussing the stories along with new ites from each subreddit a user has subscribed to appearing in their news feed.  The subreddit system is ideal for building a community about a very specific topic. Because of this, I've decided to provide comments, discussion and discovery of articles for my blog via Reddit's subreddit model.  And here is how I did it.
 ---
 Reddit provides a wonderful system for voting stories up and down,
 discussing the stories along with new ites from each subreddit a user
