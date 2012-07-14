@@ -1,4 +1,33 @@
+/*
+The MIT License (MIT)
+Copyright (c) 2012 Matthew Brace
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+*/
+
+/*
+ * Interface for retrieving comments for a given page from the Reddit
+ * API.  Example usage:
+ *        $(document).ready(
+ *          $.getJSON("http://www.reddit.com/api/info.json?url=" +
+ *            escape("<URL>") +
+ *            "&jsonp=?",
+ *          function(data) {
+ *            RedditComments.populateData(data, function(comments) {
+ *              RedditComments.drawComments(comments, $("#comments"));
+ *         })}));
+ */
 var RedditComments = {
+    /*
+     *  Takes a data object as returned from info.json&url=[X] and
+     *  calls callback with the list of comments returned for the
+     *  submission.
+     */
     populateData: function(data, callback) {
         if (data.data.children.length == 0) {
             callback([]);
@@ -34,6 +63,10 @@ var RedditComments = {
         return [];
     },
 
+    /*
+     * Renders the comments into a given element using a similar
+     * format to Reddit.  The associated styles are not included.
+     */
     drawComments: function(comments, element) {
         $(comments).each( function(index, comment) {
             element.append(RedditComments.buildCommentBlock(comment));
