@@ -809,6 +809,40 @@ article time {
   color: #696969;
 /*  margin-top: -10px;*/
 }
+
+div .comment {
+  margin-left: 10px;
+  color: #f0e7d5;
+}
+
+div .entry .likes {
+  margin-left: 3px;
+}
+
+.tagline {
+  color: #888;
+  font-size: x-small;
+}
+
+.usertext-body {
+  font-size: small;
+}
+
+.md p {
+  margin-top: -20px;
+  margin-bottom: 5px;
+}
+
+.likes {
+  display: inline;
+}
+
+.comment .child {
+  margin-top: 10px;
+  margin-left: 15px;
+  border-left: 1px dotted #DDF;
+}
+
 @media print, screen and (max-width: 720px) {
   #title .credits {
     display: block;
